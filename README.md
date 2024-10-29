@@ -1,4 +1,4 @@
-<h1> ScamBlogs by Team SCAM </h1><br>
+<h1> ScamBlogs by Team SCAM </h1>
 
 <h3>Roster</h3>
 <b>Sascha Gordon Zolov</b> - Login/Logout Functionality + Cookies + Creating new accounts <br>
