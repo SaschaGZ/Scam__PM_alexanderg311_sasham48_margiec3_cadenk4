@@ -45,7 +45,7 @@ Revising Design Doc:
     fixed backend layout
     changed CSV functionality to DB
 
-saschaG, alexM, margieC, cadenK — 2024-10-25 11:06
+saschaG, alexM, margieC, cadenK — 2024-10-28 11:06
 
     Added Finishing touches to design doc:
         - Finalized Roles:
@@ -57,4 +57,11 @@ saschaG, alexM, margieC, cadenK — 2024-10-25 11:06
         - Discussed the paths at which users travel upon choosing to edit blogs, create entries, navigate pages, etc.
         - Added more accurate language to the final document
 
+saschaG, alexM, margieC, cadenK — 2024-10-29 11:06
+
+    Starting writing code in the following html pages:
+	- LOGIN page
+	- CREATE page
+    We made a button in the login page, allowing the user to reach the create page from the login page
+    We renamed our create page to a "sign-up" page informally
     
