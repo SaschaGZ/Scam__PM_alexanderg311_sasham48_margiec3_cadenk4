@@ -1,0 +1,46 @@
+Entires:
+
+
+saschaG — 2024-10-24 12:08
+
+Design Doc:
+
+    added in component map
+    added explanations for each component
+
+
+alexM, margieC — 2024-10-24 20:30
+
+Design Doc:
+
+    added prospective html files and their respective functionalities
+    added routes and roles 
+
+
+saschaG, alexM, margieC, cadenK — 2024-10-25 18:05
+
+Discussion + Revision:
+
+    discussing design doc feedback given during class
+    revising design doc
+    adding further roles + more specifics
+
+
+alexM — 2024-10-27 17:44
+
+Revising Design Doc:
+
+    changed CSVs to DB with tables
+    explained each DB table
+    revising based on feedback given in class
+
+
+margieC — 2024-10-28 9:31
+
+Revising Design Doc:
+
+    added target ship date
+    merged some HTML files with common functionalities
+    made component map bigger
+    fixed backend layout
+    changed CSV functionality to DB
