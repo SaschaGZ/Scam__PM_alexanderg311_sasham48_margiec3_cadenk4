@@ -44,3 +44,17 @@ Revising Design Doc:
     made component map bigger
     fixed backend layout
     changed CSV functionality to DB
+
+saschaG, alexM, margieC, cadenK — 2024-10-25 11:06
+
+    Added Finishing touches to design doc:
+        - Finalized Roles:
+            Sascha - Login/Logout Functionality + Cookies + Creating new accounts
+	        Margie - Creating new blogs/CSS
+	        Alex - Sqlite, working with the database
+	        Caden - Editing existing Blogs/Entries and CSS
+`       - Discussed the use of DB over CSV through SQL
+        - Discussed the paths at which users travel upon choosing to edit blogs, create entries, navigate pages, etc.
+        - Added more accurate language to the final document
+
+    
