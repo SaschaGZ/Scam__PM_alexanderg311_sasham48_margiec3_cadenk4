@@ -9,19 +9,18 @@
 ![SCAM Team Flag](https://github.com/user-attachments/assets/f505d0ac-46e9-4463-9c51-749a009e859f)
 
 <h3>Description</h3>
-<p>This will be our description</p>
+<p>[description]</p>
 
+<pre>
 <h3>Install Guide</h3>
-<p> 1. Clone the repository <br>
-      in the terminal run: <br>
+<p> 1. Clone the repository in the terminal, run:
       $git clone git@github.com:SaschaGZ/Scam__PM_alexanderg311_sasham48_margiec3_cadenk4.git <br>
-    2. Install the required packages <br>
-      in the terminal run: <br>
+    2. Install the required packages in your cloned repository, run:
       $pip install -r requirements.txt
 </p>
 
 <h3>Launch Codes</h3>
-<p> 1. Launch the application <br>
-      in the terminal run: <br>
+<p> 1. Launch the application from the terminal, run:
       $python3 app.py
 </p>
+</pre>
