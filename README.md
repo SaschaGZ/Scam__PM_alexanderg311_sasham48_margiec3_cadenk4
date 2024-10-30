@@ -12,16 +12,16 @@
 <p>This will be our description</p>
 
 <h3>Install Guide</h3>
-<p> 1. Clone the repository 
-      in the terminal run:
-      $git clone git@github.com:SaschaGZ/Scam__PM_alexanderg311_sasham48_margiec3_cadenk4.git
-    2. Install the required packages
-      in the terminal run:
+<p> 1. Clone the repository <br>
+      in the terminal run: <br>
+      $git clone git@github.com:SaschaGZ/Scam__PM_alexanderg311_sasham48_margiec3_cadenk4.git <br>
+    2. Install the required packages <br>
+      in the terminal run: <br>
       $pip install -r requirements.txt
 </p>
 
 <h3>Launch Codes</h3>
-<p> 1. Launch the application:
-      in the terminal run:
+<p> 1. Launch the application <br>
+      in the terminal run: <br>
       $python3 app.py
 </p>
