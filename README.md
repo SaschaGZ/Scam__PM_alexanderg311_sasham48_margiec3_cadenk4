@@ -19,6 +19,8 @@
 </p>
 
 <h3>Launch Codes</h3>
+<p>cd ./PATH/TO/SaschaGZ/Scam__PM_alexanderg311_sasham48_margiec3_cadenk4.git
+</p>
 <p> 1. Launch the application from the terminal, run: <br> <br>
   $python3 app/__init__.py
 </p>
