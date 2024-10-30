@@ -20,6 +20,6 @@
 
 <h3>Launch Codes</h3>
 <p> 1. Launch the application from the terminal, run: <br> <br>
-  $python3 app.py
+  $python3 app/__init__.py
 </p>
 
