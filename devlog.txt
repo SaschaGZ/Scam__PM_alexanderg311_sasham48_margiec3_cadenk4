@@ -64,3 +64,6 @@ alexM, margieC — 2024-10-30 11:33
     Updated README.md, instructing users to run __init__.py and including the path to it from the cloned directory
     Updated requirements.txt to include packages that need to be installed
     Added team flag as a jpg file instead of just including it in the README
+
+cadenK — 2024-10-30 11:45
+	Updated README.md, making launch codes more detailed
