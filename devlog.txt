@@ -58,3 +58,9 @@ saschaG, alexM, margieC, cadenK — 2024-10-29 11:06
 margieC — 2024-10-29 09:19
     Updated README.md to include Install Guide and Launch Codes
     Fixed tree structure
+
+
+alexM, margieC — 2024-10-30 11:33
+    Updated README.md, instructing users to run __init__.py and including the path to it from the cloned directory
+    Updated requirements.txt to include packages that need to be installed
+    Added team flag as a jpg file instead of just including it in the README
