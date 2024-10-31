@@ -67,3 +67,4 @@ alexM, margieC — 2024-10-30 11:33
 
 cadenK — 2024-10-30 11:45
 	Updated README.md, making launch codes more detailed
+	External README review summary: no virtual environment setup and activation instructions, lack of detail in navigating to flask app and __init__.py
