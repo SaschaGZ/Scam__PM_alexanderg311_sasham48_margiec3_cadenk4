@@ -10,14 +10,14 @@
 
 <h3>Project Description</h3>
 <p>Our website will act as a public live feed of blog posts <br>  
-__User Features__ <br>
- - Users will be able to create accounts and log in <br>
- - Users can view other blog posts without being logged in <br>
- - Only logged-in users will be able to create blogs <br>
- - Logged-in users can edit previous blogs <br>
- - Blogs will be displayed chronologically, with more recent posts at the top <br>
- - Logged in users can switch between a page with only their own blogs and a page with all of the blogs on the site <br>
-__Site Features__ <br>
+<b></b>User Features</b> <br>
+- Users will be able to create accounts and log in <br>
+- Users can view other blog posts without being logged in <br>
+- Only logged-in users will be able to create blogs <br>
+- Logged-in users can edit previous blogs <br>
+- Blogs will be displayed chronologically, with more recent posts at the top <br>
+- Logged in users can switch between a page with only their own blogs and a page with all of the blogs on the site <br>
+<b>Site Features</b> <br>
  - Blog posts will be stores in an SQLite database <br>
  - A table will be dedicated to storing user IDs and passwords. <br>
  - Each logged-in user will be have an individual table containing their blogs; the file will begin blank and grow by row as the user creates new blogs <br>
