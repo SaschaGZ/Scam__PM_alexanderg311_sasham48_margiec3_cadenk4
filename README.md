@@ -19,9 +19,11 @@
 </p>
 
 <h3>Launch Codes</h3>
-<p>cd ./PATH/TO/SaschaGZ/Scam__PM_alexanderg311_sasham48_margiec3_cadenk4.git
-</p>
-<p> 1. Launch the application from the terminal, run: <br> <br>
-  $python3 app/__init__.py
+<p> 1. Go into the cloned repository, run: <br><br>
+  $cd ./PATH/TO/Scam__PM_alexanderg311_sasham48_margiec3_cadenk4 <br> <br>
+    2. Launch the application from the terminal, run: <br> <br>
+  $python3 app/__init__.py <br> <br>
+    3. Open the local host link: <br>
+  http://127.0.0.1:5000/
 </p>
 
