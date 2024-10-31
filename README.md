@@ -8,8 +8,8 @@
 
 ![SCAM Team Flag](https://github.com/user-attachments/assets/f505d0ac-46e9-4463-9c51-749a009e859f)
 
-<h3>Description</h3>
-<p>[description]</p>
+<h3>Project Description</h3>
+<p>Our blog website will allow users to edit and create blogs upon creating an account. Blogs will be public and can be viewed by all members of the site, regardless of whether or not a given user is logged in.</p>
 
 <h3>Install Guide</h3>
 <p> 1. Clone the repository in the terminal, run: <br> <br>
