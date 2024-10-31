@@ -20,10 +20,15 @@
 
 <h3>Launch Codes</h3>
 <p> 1. Go into the cloned repository, run: <br><br>
-  $cd ./PATH/TO/Scam__PM_alexanderg311_sasham48_margiec3_cadenk4 <br> <br>
-    2. Launch the application from the terminal, run: <br> <br>
-  $python3 app/__init__.py <br> <br>
-    3. Open the local host link: <br>
+  $cd /PATH/TO/Scam__PM_alexanderg311_sasham48_margiec3_cadenk4 <br> <br>
+    2. Navigate to "app" directory <br> <br>
+
+    $ cd app
+
+    3.  Run the app
+
+  $ python3 __init__.py <br> <br>
+    3. Open the local host link by clicking on the localhost link that appears in the terminal. Control click on the link to open: <br>
   http://127.0.0.1:5000/
 </p>
 
