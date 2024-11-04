@@ -23,9 +23,9 @@
  - Each logged-in user will be have an individual table containing their blogs; the file will begin blank and grow by row as the user creates new blogs <br>
  - Each blog is given a table containing a column of entries and a column of texts, with each entry corresponding to each block of text. Similar to the above method, this file will begin blank and grow by row as entries are added.  <br>
 Blogs will be public and can be viewed by all members of the site, regardless of whether or not a given user is logged in. <br>
-<h3>Install Guide</h3> <br> </p>
+<h3>Install Guide</h3> </p>
 <p> Clone the repository in the terminal, run: <br> 
-  $ git clone git@github.com:SaschaGZ/Scam__PM_alexanderg311_sasham48_margiec3_cadenk4.git <br> <br>
+  $ git clone git@github.com:SaschaGZ/Scam__PM_alexanderg311_sasham48_margiec3_cadenk4.git <br>
 </p>
 
 <h3>Launch Codes</h3>
