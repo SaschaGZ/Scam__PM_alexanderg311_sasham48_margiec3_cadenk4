@@ -68,3 +68,11 @@ alexM, margieC — 2024-10-30 11:33
 cadenK — 2024-10-30 11:45
 	Updated README.md, making launch codes more detailed
 	External README review summary: no virtual environment setup and activation instructions, lack of detail in navigating to flask app and __init__.py
+
+
+saschaG — 2024-10-31 11:55
+    Updated README.md, added project description and site features
+
+
+margieC — 2024-11-04 11:39
+    Updated README.md, fixed launch code: added instructions for making a virtual environment
