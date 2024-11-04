@@ -24,23 +24,24 @@
  - Each blog is given a table containing a column of entries and a column of texts, with each entry corresponding to each block of text. Similar to the above method, this file will begin blank and grow by row as entries are added.  <br>
 Blogs will be public and can be viewed by all members of the site, regardless of whether or not a given user is logged in. <br>
 <h3>Install Guide</h3> <br> </p>
-<p> 1. Clone the repository in the terminal, run: <br> 
-  $git clone git@github.com:SaschaGZ/Scam__PM_alexanderg311_sasham48_margiec3_cadenk4.git <br> <br>
-    2. Install the required packages in your cloned repository, run: <br> <br>
-  $pip install -r requirements.txt <br>
+<p> Clone the repository in the terminal, run: <br> 
+  $ git clone git@github.com:SaschaGZ/Scam__PM_alexanderg311_sasham48_margiec3_cadenk4.git <br> <br>
 </p>
 
 <h3>Launch Codes</h3>
-<p> 1. Go into the cloned repository, run: <br><br>
-  $cd /PATH/TO/Scam__PM_alexanderg311_sasham48_margiec3_cadenk4 <br> <br>
-    2. Navigate to "app" directory <br> <br>
-
-    $ cd app
-
-    3.  Run the app
-
-  $ python3 __init__.py <br> <br>
-    3. Open the local host link by clicking on the localhost link that appears in the terminal. Control click on the link to open: <br>
+<p> 
+    1. Make a virtual environment, run: <br>
+  $ python3 -m venv [name] <br> <br>
+    2. Activate the virtual environment, run: <br>
+  $ . [name]/bin/activate <br> <br>
+    3. Go into the cloned repository, run: <br> 
+  $ cd /PATH/TO/Scam__PM_alexanderg311_sasham48_margiec3_cadenk4 <br> <br>
+    4. Install the required packages in your cloned repository, run: <br>
+  $ pip install -r requirements.txt <br> <br>
+    5. Launch the application, run: <br> 
+  $ python3 app/__init__.py <br> <br>
+    6. Open the local host link: <br>
   http://127.0.0.1:5000/
-</p>
 
+  When done using the virtual environment, run: <br>
+  $ deactivate  
