@@ -1,10 +1,9 @@
 from flask import Flask
 from flask import render_template
 from flask import session
-from flask import request, flash, redirect, os
+from flask import request, flash, redirect
 import sqlite3
 app = Flask(__name__)
-app.secret.key = os.urandom(32) #creates a secret key with a random string
 
 @app.route("/")
 def login():
