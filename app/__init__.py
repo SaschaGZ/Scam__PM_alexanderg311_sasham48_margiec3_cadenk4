@@ -1,19 +1,34 @@
 from flask import Flask
 from flask import render_template
+from flask import session
+from flask import request, flash, redirect, os
+import sqlite3
 app = Flask(__name__)
-
+app.secret.key = os.urandom(32) #creates a secret key with a random string
 
 @app.route("/")
 def login():
     print(__name__)
+    if request.method == 'POST':
+        method = 'POST'
+        username = request.form.get('username')
+        password = request.form.get('password')
+    else:
+        username = request.args['username']
+        username = request.args['password']
+        method = 'GET'
+    session['username'] = username
+    session['password'] = password
     return render_template("login.html")
 @app.route("/blog")
 def blog():
     if request.method == 'POST':
         method = 'POST'
         username = request.form.get('username')
+        password = request.form.get('password')
     else:
         username = request.args['username']
+        username = request.args['password']
         method = 'GET'
     session['username'] = username
     return render_template('blog.html', username = username)  #response to a form submission
@@ -22,8 +37,10 @@ def create():
     if request.method == 'POST':
         method = 'POST'
         username = request.form.get('username')
+        password = request.form.get('password')
     else:
         username = request.args['username']
+        username = request.args['password']
         method = 'GET'
     session['username'] = username
     return render_template('create.html')  #response to a form submission
@@ -32,8 +49,10 @@ def edit():
     if request.method == 'POST':
         method = 'POST'
         username = request.form.get('username')
+        password = request.form.get('password')
     else:
         username = request.args['username']
+        username = request.args['password']
         method = 'GET'
     session['username'] = username
     return render_template('edit.html', username = username)  #response to a form submission
@@ -42,8 +61,10 @@ def entry():
     if request.method == 'POST':
         method = 'POST'
         username = request.form.get('username')
+        password = request.form.get('password')
     else:
         username = request.args['username']
+        username = request.args['password']
         method = 'GET'
     session['username'] = username
     return render_template('entry.html', username = username)  #response to a form submission
@@ -52,8 +73,10 @@ def reading():
     if request.method == 'POST':
         method = 'POST'
         username = request.form.get('username')
+        password = request.form.get('password')
     else:
         username = request.args['username']
+        username = request.args['password']
         method = 'GET'
     session['username'] = username
     return render_template('reading.html', username = username)  #response to a form submission
@@ -62,8 +85,10 @@ def rename():
     if request.method == 'POST':
         method = 'POST'
         username = request.form.get('username')
+        password = request.form.get('password')
     else:
         username = request.args['username']
+        username = request.args['password']
         method = 'GET'
     session['username'] = username
     return render_template('rename.html', username = username)  #response to a form submission
