@@ -8,18 +8,8 @@ app = Flask(__name__)
 @app.route("/")
 def login():
     print(__name__)
-    if request.method == 'POST':
-        method = 'POST'
-        username = request.form.get('username')
-        password = request.form.get('password')
-    else:
-        username = request.args['username']
-        username = request.args['password']
-        method = 'GET'
-    session['username'] = username
-    session['password'] = password
     return render_template("login.html")
-@app.route("/blog")
+@app.route("/auth")
 def blog():
     if request.method == 'POST':
         method = 'POST'
@@ -29,19 +19,9 @@ def blog():
         username = request.args['username']
         username = request.args['password']
         method = 'GET'
-    session['username'] = username
     return render_template('blog.html', username = username)  #response to a form submission
 @app.route("/create")
 def create():
-    if request.method == 'POST':
-        method = 'POST'
-        username = request.form.get('username')
-        password = request.form.get('password')
-    else:
-        username = request.args['username']
-        username = request.args['password']
-        method = 'GET'
-    session['username'] = username
     return render_template('create.html')  #response to a form submission
 @app.route("/edit")
 def edit():
@@ -91,5 +71,6 @@ def rename():
         method = 'GET'
     session['username'] = username
     return render_template('rename.html', username = username)  #response to a form submission
+if __name__ == "__main__":
     app.debug = True
     app.run()
