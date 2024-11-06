@@ -5,6 +5,12 @@ from flask import request, flash, redirect
 import sqlite3
 app = Flask(__name__)
 
+DB_FILE="scam_blog.db"
+db = sqlite3.connect(DB_FILE) #open if file exists, otherwise create
+c = db.cursor()               #facilitate db ops -- you will use cursor to trigger db events
+
+c.execute("CREATE TABLE user_information (username TEXT, password TEXT)")
+
 @app.route("/")
 def login():
     print(__name__)
@@ -19,6 +25,7 @@ def blog():
         username = request.args['username']
         username = request.args['password']
         method = 'GET'
+    c.execute(f'INSERT INTO user_information (username, password) VALUES ({username},{password})')
     return render_template('blog.html', username = username)  #response to a form submission
 @app.route("/create")
 def create():
