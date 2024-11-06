@@ -76,3 +76,10 @@ saschaG — 2024-10-31 11:55
 
 margieC — 2024-11-04 11:39
     Updated README.md, fixed launch code: added instructions for making a virtual environment
+
+
+saschaG, alexM, margieC, cadenK — 2024-11-06 11:42
+    Worked on __init__.py, rendering the login, auth, and creating account pages
+
+alexM — 2024-11-06 11:45
+    Started initializing the database
