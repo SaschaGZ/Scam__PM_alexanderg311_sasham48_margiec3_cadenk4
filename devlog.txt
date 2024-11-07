@@ -90,3 +90,5 @@ cadenK - 2024-11-06 11:10
 margieC - 2024-11-07 7:40
         Worked on sessions and login/logout functionality to remain logged in across pages 
 
+saschaG - 2024-11-07 7:45
+        Fixed viewacc
