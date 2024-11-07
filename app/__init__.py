@@ -18,6 +18,13 @@ def addaccount(username, password):
     c.execute(f"INSERT INTO accounts VALUES ('{username}', '{password}')")
     db.commit()
     db.close()
+def addblog(owner, title):
+    db = sqlite3.connect("data.db")
+    c = db.cursor()
+    c.execute(f"Insert INTO blogs VALUES ('{owner}', '{title}', 0)")
+    c.execute(f"CREATE TABLE IF NOT EXISTS '{owner}{title}'(entryID INTEGER, entryTitle, entry TEXT)")
+    db.commit()
+    db.close()
 def login():
     if 'username' in session:
         user = session['username']
