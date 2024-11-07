@@ -12,19 +12,12 @@ c = db.cursor()               #facilitate db ops -- you will use cursor to trigg
 c.execute("CREATE TABLE IF NOT EXISTS user_information (username TEXT UNIQUE, password TEXT)")
 
 @app.route("/")
-def addaccount(username, password):
-    db = sqlite3.connect(DB_FILE)
-    c = db.cursor()
-    c.execute(f"INSERT INTO accounts VALUES ('{username}', '{password}')")
-    db.commit()
-    db.close()
-def addblog(owner, title):
-    db = sqlite3.connect("data.db")
-    c = db.cursor()
-    c.execute(f"Insert INTO blogs VALUES ('{owner}', '{title}', 0)")
-    c.execute(f"CREATE TABLE IF NOT EXISTS '{owner}{title}'(entryID INTEGER, entryTitle, entry TEXT)")
-    db.commit()
-    db.close()
+# def addaccount(username, password):
+#     db = sqlite3.connect(DB_FILE)
+#     c = db.cursor()
+#     c.execute(f"INSERT INTO accounts VALUES ('{username}', '{password}')")
+#     db.commit()
+#     db.close()
 def login():
     if 'username' in session:
         user = session['username']
@@ -65,7 +58,13 @@ def create():
             return render_template('create.html', error = error)
     return render_template('create.html')
 @app.route("/edit")
-def edit():
+def edit(owner, title):
+    db = sqlite3.connect("data.db")
+    c = db.cursor()
+    c.execute(f"Insert INTO blogs VALUES ('{owner}', '{title}', 0)")
+    c.execute(f"CREATE TABLE IF NOT EXISTS '{owner}{title}'(entryID INTEGER, entryTitle, entry TEXT)")
+    db.commit()
+    db.close()
     return render_template('edit.html', username = username)
 @app.route("/entry")
 def entry():
