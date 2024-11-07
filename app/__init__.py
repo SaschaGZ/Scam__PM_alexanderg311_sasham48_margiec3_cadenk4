@@ -23,6 +23,11 @@ def login():
         user = session['username']
         return render_template('blog.html')
     return render_template("login.html")
+def viewAccount(username):
+    db = sqlite3.connect("data.db")
+    c = db.cursor()
+    c.execute(f"SELECT password from accounts WHERE username = '{username}'")
+    return c.fetchall()
 @app.route("/auth", methods=['GET', 'POST'])
 def auth():
     error = ""
