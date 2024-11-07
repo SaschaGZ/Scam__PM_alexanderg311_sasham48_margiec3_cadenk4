@@ -83,3 +83,6 @@ saschaG, alexM, margieC, cadenK — 2024-11-06 11:42
 
 alexM — 2024-11-06 11:45
     Started initializing the database
+
+cadenK - 2024-11-06 11:10
+	Worked on blog.html, create.html, edit.html, login.html, and entry.html
