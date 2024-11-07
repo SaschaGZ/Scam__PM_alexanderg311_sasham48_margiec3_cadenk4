@@ -25,8 +25,21 @@ def blog():
         username = request.args['username']
         username = request.args['password']
         method = 'GET'
-    c.execute(f'INSERT INTO user_information (username, password) VALUES ({username},{password})')
-    return render_template('blog.html', username = username)  #response to a form submission
+    c.execute('SELECT password FROM user_information WHERE username = ?', (username,))
+    result = c.fetchone()
+
+    if result:
+        # Username exists, now check if the password matches
+        if result[0] == password:
+            session['username'] = username  # Store user in session
+            return render_template('blog.html', username = username)  #response to a form submission
+        else:
+            flash("Incorrect password. Please try again.", "danger")
+        return render_template('login.html')  #response to a form submission
+    else:
+        # Username does not exist, redirect to registration
+        flash("Username not found. Please created account firs first.", "danger")
+        return render_template('create.html')  #response to a form submission
 @app.route("/create")
 def create():
     return render_template('create.html')  #response to a form submission
