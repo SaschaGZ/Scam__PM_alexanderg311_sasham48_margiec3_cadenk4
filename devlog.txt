@@ -86,3 +86,7 @@ alexM — 2024-11-06 11:45
 
 cadenK - 2024-11-06 11:10
 	Worked on blog.html, create.html, edit.html, login.html, and entry.html
+
+margieC - 2024-11-07 7:40
+        Worked on sessions and login/logout functionality to remain logged in across pages 
+
