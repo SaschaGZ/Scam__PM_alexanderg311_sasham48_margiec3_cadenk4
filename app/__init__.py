@@ -1,4 +1,4 @@
-from flask import Flask, render_template, session, request, flash, redirect
+from flask import Flask, render_template, session, request, redirect
 import sqlite3
 import key
 
@@ -9,28 +9,36 @@ DB_FILE="scam_blog.db"
 db = sqlite3.connect(DB_FILE, check_same_thread=False) #open if file exists, otherwise create
 c = db.cursor()               #facilitate db ops -- you will use cursor to trigger db events
 
-c.execute("CREATE TABLE IF NOT EXISTS user_information (username TEXT, password TEXT)")
+c.execute("CREATE TABLE IF NOT EXISTS user_information (username TEXT UNIQUE, password TEXT)")
 
 @app.route("/")
 def login():
-    if 'username' in session and 'password' in session:
-        username = session['username']
+    if 'username' in session:
+        user = session['username']
         return render_template('blog.html')
     return render_template("login.html")
-@app.route("/auth")
+@app.route("/auth", methods=['GET', 'POST'])
 def auth():
+    error = ""
     if request.method == 'POST':
-        method = 'POST'
         username = request.form.get('username')
         password = request.form.get('password')
-    else:
-        username = request.args['username']
-        username = request.args['password']
-        method = 'GET'
-    c.execute(f'INSERT INTO user_information (username, password) VALUES ({username},{password})')
-    return render_template('blog.html', username = username)  #response to a form submission
+        c.execute('SELECT password FROM user_information WHERE username = ?', (username,))
+        match = c.fetchone()
+        if match:
+            if match[0] == password:
+                session['username'] = username
+                return redirect('/blog')
+            else:
+                error = "Incorrect password. Please try again."
+                return redirect('/')
+    return redirect('/create')
 @app.route("/create", methods=['GET', 'POST'])
 def create():
+    error = ""
+    if 'username' in session:
+        user = session['username']
+        return render_template('blog.html')
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
@@ -38,12 +46,10 @@ def create():
             c.execute('INSERT INTO user_information (username, password) VALUES (?, ?)', (username, password))
             db.commit()
             session['username'] = username
-            session['password'] = password
-            flash("Registration successful!", "success")
             return render_template("blog.html")
         except sqlite3.IntegrityError:
-            flash("Username already exists. Choose a different one.", "error")
-            return render_template('create.html')
+            error = "Username already exists. Choose a different one."
+            return render_template('create.html', error = error)
     return render_template('create.html')
 @app.route("/edit")
 def edit():
