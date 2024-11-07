@@ -3,30 +3,24 @@
 <html>
 
   <head>
-    <title> ENTRY PAGE </title>
+    <title>Create an Account</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='./static/style.css') }}">
   </head>
 
   <body>
-    <h1>
-        ENTRY
-    </h1>
-
-  <form action="{{ url_for('entry', page_id=blog['id']) }}" method="post">
-    <label for="title">Title</label>
-    <input type="text" id="title" name="title" value="{{ blog['title'] }}" maxlength="50" required
-      pattern=".*[a-zA-Z0-9].*"
-      title="">
+      <h1>
+      Create an account
+      </h1>
+      <form method="POST">
+        <label for="username"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" id="username" name="username" required>
+  
+        <label for="password"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" id="password" name="password" required>
+  
+      <button type="submit">Register</button>
+    </form>
     <br>
-
-    <label for="text">Text</label>
-    <textarea id="content" name="content" rows="20" cols="40" required pattern=".*[a-zA-Z0-9].*"
-      title="">{{ blog['content'] }}</textarea>
-    <br><br>
-
-    <button type="submit">Edit Blog Entry</button>
-  </form>
-
-    
   </body>
 
 </html>
