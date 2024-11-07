@@ -23,7 +23,7 @@ def login():
         user = session['username']
         return render_template('blog.html')
     return render_template("login.html")
-def viewAccount(username):
+def viewaccount(username):
     db = sqlite3.connect("data.db")
     c = db.cursor()
     c.execute(f"SELECT password from accounts WHERE username = '{username}'")
