@@ -12,6 +12,12 @@ c = db.cursor()               #facilitate db ops -- you will use cursor to trigg
 c.execute("CREATE TABLE IF NOT EXISTS user_information (username TEXT UNIQUE, password TEXT)")
 
 @app.route("/")
+def addaccount(username, password):
+    db = sqlite3.connect(DB_FILE)
+    c = db.cursor()
+    c.execute(f"INSERT INTO accounts VALUES ('{username}', '{password}')")
+    db.commit()
+    db.close()
 def login():
     if 'username' in session:
         user = session['username']
