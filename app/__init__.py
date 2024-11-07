@@ -66,7 +66,7 @@ def rename():
 @app.route("/logout")
 def logout():
     session.pop('username', None)
-    return redirect('/login')
+    return redirect('/')
 
 if __name__ == "__main__":
     app.debug = True
