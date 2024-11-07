@@ -9,7 +9,7 @@ DB_FILE="scam_blog.db"
 db = sqlite3.connect(DB_FILE) #open if file exists, otherwise create
 c = db.cursor()               #facilitate db ops -- you will use cursor to trigger db events
 
-c.execute("CREATE TABLE user_information (username TEXT, password TEXT)")
+#c.execute("CREATE TABLE user_information (username TEXT, password TEXT)")
 
 @app.route("/")
 def login():
