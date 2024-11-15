@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-
 <html>
 
-  <head>
-    <title>Create an Account</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='./static/style.css') }}">
-  </head>
+<head>
+  <title>Create Blog</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='./static/style.css') }}">
+</head>
 
-  <body>
-      <h1>
-      Create an account
-      </h1>
-      <form method="POST">
-        <label for="username"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" id="username" name="username" required>
-  
-        <label for="password"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" id="password" name="password" required>
-  
-      <button type="submit">Register</button>
+<body>
+    <h1>Create Blog</h1>
+
+    <form action="{{ url_for('createBlog') }}" method="POST">
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" required>
+
+        <label for="content">Content</label>
+        <textarea id="content" name="content" rows="10" required></textarea>
+
+        <label for="date">Date</label>
+        <input type="text" id="datePublished" name="datePublished" placeholder="YYYY-MM-DD" required>
+
+        <input type="submit" value="Create Blog">
     </form>
-    <br>
-  </body>
+</body>
 
 </html>
