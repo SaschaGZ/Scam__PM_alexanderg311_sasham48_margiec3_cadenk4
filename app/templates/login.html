@@ -1,27 +1,34 @@
 <!DOCTYPE html>
-
-<html>
-
-  <head>
-    <title> LOGIN PAGE </title>
-  </head>
-
-  <body>
-    <h1>
-        LOGIN
-    </h1>
-    <form action="/auth" method="GET">
-      <label for="username">Username:</label>
-      <input type="text" name="username" required>
-      <label for="passsword">Password:</label>
-      <input type="password" name="password" required>
-      <br>
-      <input type="submit" name="sub1" value="login">
-    </form>
-    <br>
-    <a href="/create">
-      <button>SIGN-UP</button>
-    </a>
-  </body>
-
+<head>
+    <title>Your Blogs</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Your Blogs, {{ username }}!</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('createBlog') }}">Create a New Post</a></li>
+                <li><a href="{{ url_for('edit') }}">Edit Your Posts</a></li>
+                <li><a href="{{ url_for('rename') }}">Rename Your Blog</a></li>
+                <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="blog-posts">
+        <h2>Your Blog Posts</h2>
+        
+        {% if blogs %}
+            <ul>
+                {% for blog in blogs %}
+                    <li>
+                        <p>{{ blog[0] }}</p> 
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No blogs sad :/</p>
+        {% endif %}
+    </section>
+</body>
 </html>
