@@ -15,7 +15,7 @@ def login():
         username = session['username']
         return render_template('blog.html')
     return render_template("login.html")
-@app.route("/auth", methods=['POST'])
+@app.route("/auth", methods=['GET', 'POST'])
 def auth():
     if request.method == 'POST':
         username = request.form.get('username')
@@ -29,7 +29,7 @@ def auth():
             return redirect('blog.html')
         else:
             flash(":( try again", "error")
-            return redirect('/')
+            return redirect('/create')
     return redirect('/')
 @app.route("/create", methods=['GET', 'POST'])
 def create():
@@ -39,7 +39,7 @@ def create():
         try:
             c.execute('INSERT INTO user_information (username, password) VALUES (?, ?)', (username, password))
             db.commit()
-            c.execute(f'''CREATE TABLE IF NOT EXISTS {username} (blog TEXT)''')
+            c.execute(f'''CREATE TABLE IF NOT EXISTS {username} (title TEXT, content TEXT, datePublished TEXT)''')
             db.commit()
             session['username'] = username
             session['password'] = password
@@ -58,16 +58,16 @@ def rename():
 @app.route("/logout")
 def logout():
     session.pop('username', None)
-    return redirect('/login')
+    return redirect('/')
 
 @app.route("/entry", methods=['GET', 'POST'])
 def createBlog():
     if 'username' not in session:
         return redirect('/')  # not logged in
     if request.method == 'POST':
-        blog = request.form['blog']
+        blog = (request.form['title'], request.form['content'], request.form['datePublished'])
         username = session['username']
-        c.execute(f"INSERT INTO {username} (blog) VALUES (?)", (blog))
+        c.execute(f"INSERT INTO {username} (title, content, datePublished) VALUES (?, ?, ?)", (blog))
         db.commit()
         flash("You made a blog!", "success")
         return redirect('/reading')  # go to all blogs
